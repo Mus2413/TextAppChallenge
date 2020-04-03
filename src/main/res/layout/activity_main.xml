@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/userdetail"
+    android:layout_marginTop="30dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:layout_marginLeft="120dp"/>
+
+
+    <EditText
+        android:id="@+id/editTextemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@id/editTextName"/>
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/userdetail"
+        android:id="@+id/relativedescription">
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Description"
+        android:layout_below="@id/imageView" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativedescription"
+        android:layout_marginTop="20dp"
+        android:id="@+id/relativegender">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@id/editText3"
+        android:layout_marginTop="10dp"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText3"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:id="@+id/radiogroup1">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:onClick="onButtonClicked"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/female"
+            android:text="Female"
+            android:onClick="onButtonClicked" />
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonClicked"
+            android:text="Other" /> </RadioGroup>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativegender"
+        android:layout_marginTop="20dp"
+        android:id="@+id/relativecountry">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:text="Country"
+        android:textStyle="bold"
+        android:layout_below="@id/radiogroup1"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativewebsite"
+        android:layout_below="@id/relativecountry"
+        android:layout_marginTop="20dp">
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@id/textView4"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:layout_below="@id/spinner"
+        android:hint="Website"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativebutton"
+        android:layout_below="@id/relativewebsite"
+        android:layout_marginTop="20dp">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@id/editText4"
+        android:text="Finish"
+        android:layout_centerInParent="true"
+        android:onClick="finishbutton"/>
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/newRelativeLayout"
+    android:layout_alignParentBottom="true"
+    android:background="@color/blue">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher_timer"
+        android:layout_marginLeft="210dp"
+        android:id="@+id/timerimage"
+        android:onClick="onItemClick"/>
+
+    <ImageView
+        android:id="@+id/shoppingimage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="onItemClick"
+        android:src="@mipmap/ic_launcher_shoppingcart"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/soundimage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:onClick="onItemClick"
+        android:src="@mipmap/ic_launcher_sound" />
+</RelativeLayout>
+</RelativeLayout>
